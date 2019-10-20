@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    let money = prompt("Ваш бюджет на месяц?", ''),
+        time = prompt("Введите дату в формате YYYY-MM-DD", '');
+
+    let appData = {
+      budget: money,
+      timeData: time,
+      expenses: {},
+      optionalExpenses: {},
+      income: [],
+      savings: false
+    };
+
+    let vopros_1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+        vopros_2 = prompt("Во сколько обойдется?", ''),
+        vopros_3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+        vopros_4 = prompt("Во сколько обойдется?", '');
+
+    appData.expenses[vopros_1] = vopros_2;
+    appData.expenses[vopros_3] = vopros_4;
+
+    alert(appData.budget / 30);
+
+  </script>
+
+</body>
+</html>
